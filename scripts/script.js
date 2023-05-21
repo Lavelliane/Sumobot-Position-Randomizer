@@ -40,7 +40,9 @@ function hideLoading() {
 function showLoading() {
   return new Promise(function(resolve, reject) {
     loadingDiv.style.visibility = "visible";
-
+    const randomNumber = generateRandomNumber();
+    positionImg.src = `assets/pos_com_${randomNumber}.jpg`;
+    positionName.innerText = positionNames[randomNumber-1];
     // Set a timeout to hide the loading animation after a specific duration
     setTimeout(function() {
       hideLoading();
@@ -54,10 +56,9 @@ btnRandom.addEventListener("click", (e) => {
   e.preventDefault();
   positionImg.style.visibility = "hidden";
   positionName.style.visibility = "hidden";
-  const randomNumber = generateRandomNumber();
+  
   showLoading().then(() => {
-    positionImg.src = `assets/pos_com_${randomNumber}.jpg`;
-    positionName.innerText = positionNames[randomNumber-1];
+    
     positionImg.style.visibility = "visible";
     positionName.style.visibility = "visible";
   });
