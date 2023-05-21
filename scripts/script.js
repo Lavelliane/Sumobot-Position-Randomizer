@@ -56,9 +56,9 @@ btnRandom.addEventListener("click", (e) => {
   positionName.style.visibility = "hidden";
   const randomNumber = generateRandomNumber();
   showLoading().then(() => {
-    positionImg.style.visibility = "visible";
-    positionName.style.visibility = "visible";
     positionImg.src = `assets/pos_com_${randomNumber}.jpg`;
     positionName.innerText = positionNames[randomNumber-1];
+    positionImg.style.visibility = "visible";
+    positionName.style.visibility = "visible";
   });
 });
