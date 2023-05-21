@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Quattrocento+Sans');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+h1 {
+    font-size: 3rem;
+}
+.flex-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.flex-item {
+    margin-top: 1.5rem;
+}
+.position-name {
+    font-size: 5rem;
+    font-weight: 400;
+}
+.btn-random {
+    padding: 2rem 5rem;
+    background-color: transparent;
+    border: 3px solid #000;
+    border-radius: 1rem;
+    margin-top: 1.5rem;
+    cursor: pointer;
+}
+.btn-text {
+    font-size: 2rem;
+}
+
+.wrapper{
+    width:200px;
+    height:60px;
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+}
+.circle{
+    width:20px;
+    height:20px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: #000;
+    left:15%;
+    transform-origin: 50%;
+    animation: circle .5s alternate infinite ease;
+}
+
+@keyframes circle{
+    0%{
+        top:60px;
+        height:5px;
+        border-radius: 50px 50px 25px 25px;
+        transform: scaleX(1.7);
+    }
+    40%{
+        height:20px;
+        border-radius: 50%;
+        transform: scaleX(1);
+    }
+    100%{
+        top:0%;
+    }
+}
+.circle:nth-child(2){
+    left:45%;
+    animation-delay: .2s;
+}
+.circle:nth-child(3){
+    left:auto;
+    right:15%;
+    animation-delay: .3s;
+}
+.shadow{
+    width:20px;
+    height:4px;
+    border-radius: 50%;
+    background-color: rgba(0,0,0,.5);
+    position: absolute;
+    top:62px;
+    transform-origin: 50%;
+    z-index: -1;
+    left:15%;
+    filter: blur(1px);
+    animation: shadow .5s alternate infinite ease;
+}
+
+@keyframes shadow{
+    0%{
+        transform: scaleX(1.5);
+    }
+    40%{
+        transform: scaleX(1);
+        opacity: .7;
+    }
+    100%{
+        transform: scaleX(.2);
+        opacity: .4;
+    }
+}
+.shadow:nth-child(4){
+    left: 45%;
+    animation-delay: .2s
+}
+.shadow:nth-child(5){
+    left:auto;
+    right:15%;
+    animation-delay: .3s;
+}
+.wrapper span{
+    position: absolute;
+    top:75px;
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    letter-spacing: 12px;
+    color: #000;
+    left:0%;
+    text-align: center;
+}
