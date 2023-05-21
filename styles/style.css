@@ -48,7 +48,13 @@ h1 {
 .btn-text {
     font-size: 2rem;
 }
-
+.heading-subtitle {
+    font-size: 1.7rem;
+    
+}
+.heading{
+    text-align: center;
+}
 .wrapper{
     width:200px;
     height:60px;
