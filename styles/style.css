@@ -19,6 +19,7 @@ body {
 
 h1 {
     font-size: 3rem;
+    margin-bottom: 1.5rem;
 }
 .flex-container {
     position: absolute;
@@ -36,6 +37,7 @@ h1 {
 .position-name {
     font-size: 5rem;
     font-weight: 400;
+    text-align: center;
 }
 .btn-random {
     padding: 2rem 5rem;
@@ -57,12 +59,19 @@ h1 {
 }
 .wrapper{
     width:200px;
-    height:60px;
-    position: absolute;
+    height:200px;
+    position: inherit;
     left:50%;
     top:50%;
     transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 10px;
 }
+/* .loading-img {
+    margin-bottom: 5;
+} */
 .circle{
     width:20px;
     height:20px;
@@ -135,13 +144,32 @@ h1 {
     right:15%;
     animation-delay: .3s;
 }
-.wrapper span{
-    position: absolute;
-    top:75px;
-    font-family: 'Lato', sans-serif;
-    font-size: 20px;
-    letter-spacing: 12px;
-    color: #000;
-    left:0%;
-    text-align: center;
+.wrapper img{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+#positionImg {
+    width: 100%;
+    height: 100%;
+}
+
+@media only screen and (max-width: 767px) {
+  
+  html {
+    font-size: 57%;
+  }
+  .position-container {
+    width: 200%;
+  }
+  .btn-text{
+    font-size: 1.75rem;
+  }
+  .btn-random {
+    padding: 1.5rem 4rem;
+  }
+  .position-name{
+    font-size: 3rem;
+  }
+  /* Add more styles as needed */
 }
